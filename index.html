@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duas Flechas</title>
+<style>
+  @font-face { font-family: 'Display'; src: url('fonts/InterDisplay-Regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Display'; src: url('fonts/InterDisplay-Medium.otf'); font-weight: 500; }
+  @font-face { font-family: 'Display'; src: url('fonts/InterDisplay-SemiBold.otf'); font-weight: 600; }
+  @font-face { font-family: 'Display'; src: url('fonts/InterDisplay-Bold.otf'); font-weight: 700; }
+  html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; background: #f5f5f7; overflow: hidden; }
+  #stage > * { position: absolute; left: 0; top: 0; }
+  #p5host { position: absolute; left: -99999px; }
+  svg text { font-family: 'Display', -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; }
+  body.render { background: #f5f5f7; }
+  #hud { position: fixed; right: 12px; bottom: 10px; color: #aaa; font: 12px monospace; }
+  body.render #hud { display: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="cv" width="1080" height="1920"></canvas>
+  <svg id="sv" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+</div>
+<div id="p5host"></div>
+<div id="hud">espaço: play/pausa · ←/→: ±1s</div>
+<script src="node_modules/p5/lib/p5.min.js"></script>
+<script src="node_modules/p5.brush/dist/p5.brush.js"></script>
+<script src="src/assets.js"></script>
+<script src="src/engine.js"></script>
+<script src="src/timeline.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
